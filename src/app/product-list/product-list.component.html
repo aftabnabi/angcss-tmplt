@@ -1,6 +1,8 @@
 <h2>Products</h2>
 
-
+<ul *ngFor="let p of products; let i=index">
+  <li>{{i+1}}&nbsp;&nbsp;&nbsp;&nbsp;{{p.name}}&nbsp;&nbsp;&nbsp;&nbsp;{{p.description}}&nbsp;&nbsp;&nbsp;&nbsp;{{p.price}}</li>
+</ul>
 <!-- 
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
