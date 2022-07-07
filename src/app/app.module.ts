@@ -7,6 +7,10 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { BottomBarComponent } from './product-list/bottom-bar/bottom-bar.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
+import { DeleteProductComponent } from './delete-product/delete-product.component';
+import { DetailProductComponent } from './detail-product/detail-product.component';
 
 @NgModule({
   imports: [
@@ -14,18 +18,25 @@ import { BottomBarComponent } from './product-list/bottom-bar/bottom-bar.compone
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
-    ])
+      { path: 'add', component: AddProductComponent },
+      { path: 'update', component: UpdateProductComponent },
+      { path: 'delete', component: DeleteProductComponent },
+      { path: 'detail', component: DetailProductComponent },
+    ]),
   ],
   declarations: [
     AppComponent,
     TopBarComponent,
     ProductListComponent,
-    BottomBarComponent
+    BottomBarComponent,
+    AddProductComponent,
+    UpdateProductComponent,
+    DeleteProductComponent,
+    DetailProductComponent,
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
-
+export class AppModule {}
 
 /*
 Copyright Google LLC. All Rights Reserved.
